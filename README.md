@@ -6,9 +6,10 @@ We change it into ASR task. Five modeling units are compared on Mandarin Chinese
 ## Usage
 1)config your *.yaml; 2)python train.py; 3)python evaluate.py
 
-Source Code for paper:
-Syllable-Based Sequence-to-Sequence Speech Recognition with Transformer in Mandarin Chinese.pdf
-A Comparison of Modeling Units in Sequence-to-Sequence Speech Recognition with the Transformer on Mandarin Chinese.pdf
+## Source Code for paper:
+1)Zhou, S., Dong, L., Xu, S., & Xu, B. (2018). Syllable-Based Sequence-to-Sequence Speech Recognition with the Transformer in Mandarin Chinese. arXiv preprint arXiv:1804.10752.
+
+2)Zhou, S., Dong, L., Xu, S., & Xu, B. (2018). A Comparison of Modeling Units in Sequence-to-Sequence Speech Recognition with the Transformer on Mandarin Chinese. arXiv preprint arXiv:1805.06239.
 
 Contact
 Raise an issue on github or email to zhoushiyu2013@ia.ac.cn.

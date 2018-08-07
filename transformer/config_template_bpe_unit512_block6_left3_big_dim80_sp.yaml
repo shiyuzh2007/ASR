@@ -1,0 +1,62 @@
+---
+model: 'Transformer'
+dst_vocab: '/mnt/lustre/xushuang2/syzhou/tensor2tensor/hkust_ci_phone/src_data/words_s2s.txt.bpe_5000'
+dst_vocab_size: 11039
+#### hidden_units: 512
+hidden_units: 1024
+scale_embedding: True
+tie_embedding_and_softmax: True
+attention_dropout_rate: 0.0
+#### residual_dropout_rate: 0.1
+residual_dropout_rate: 0.3
+num_blocks: 6
+#### num_heads: 8
+num_heads: 16
+ff_activation: 'glu'
+model_dir: './exp/log_dir_unit512_block6_timescale5_left3_sub3_lr1.0_bpe_big_dim80_sp'
+bucket_min: 50
+bucket_max: 10000
+bucket_step: 10
+train:
+    #### num_gpus: 4
+    #### tokens_per_batch: 30000
+    num_gpus: 8
+    tokens_per_batch: 50000
+    src_path: '/mnt/lustre/xushuang2/syzhou/tensor2tensor/hkust_ci_phone/src_data/train_dim80/feats.scp.left3_sub3.sp'
+    dst_path: '/mnt/lustre/xushuang2/syzhou/tensor2tensor/hkust_ci_phone/src_data/train_dim80/text.sp.bpe_5000'
+    max_length: 5000
+    num_epochs: 30
+    num_steps: 300000
+    save_freq: 200
+    show_freq: 1
+    summary_freq: 100
+    grads_clip: 5
+    optimizer: 'adam_decay'
+    learning_rate: 1
+    #### warmup_steps: 4000
+    warmup_steps: 12000
+    label_smoothing: 0.1
+    toleration: 10
+    eval_on_dev: False
+#    input_dim: 129
+#    input_dim: 516
+    input_dim: 320
+    var_filter: ''
+dev:
+    batch_size: 256
+    src_path:
+    ref_path:
+    output_path:
+
+test:
+    batch_size: 100
+    max_target_length: 200
+    lp_alpha: 0.6
+    beam_size: 13
+    num_gpus: 4
+
+    set1:
+        src_path: '/mnt/lustre/xushuang2/syzhou/tensor2tensor/hkust_ci_phone/src_data/dev_dim80/feats.scp.left3_sub3'
+        ref_path: '/mnt/lustre/xushuang2/syzhou/tensor2tensor/hkust_ci_phone/src_data/dev_dim80/text'
+        output_path: './exp/log_dir_unit512_block6_timescale5_left3_sub3_lr1.0_bpe_big_dim80_sp/decoder.txt'
+        cmd:

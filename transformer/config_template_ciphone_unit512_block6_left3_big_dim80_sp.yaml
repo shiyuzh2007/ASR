@@ -19,16 +19,12 @@ bucket_max: 10000
 bucket_step: 10
 is_attention_smoothing: False
 train:
-    #### num_gpus: 4
-    #### tokens_per_batch: 20000
     num_gpus: 8
-    # tokens_per_batch: 40000
     tokens_per_batch: 30000
     src_path: '/mnt/lustre/xushuang2/syzhou/tensor2tensor/hkust_ci_phone/src_data/train_dim80/feats.scp.left3_sub3.sp'
     dst_path: '/mnt/lustre/xushuang2/syzhou/tensor2tensor/hkust_ci_phone/src_data/train_dim80/text2phone.txt.nosil.sp'
     max_length: 5000
-    # num_epochs: 30
-    num_epochs: 10
+    num_epochs: 30
     num_steps: 300000
     save_freq: 200
     show_freq: 1
@@ -36,8 +32,6 @@ train:
     grads_clip: 5
     optimizer: 'adam_decay'
     learning_rate: 1
-    #### warmup_steps: 4000
-    #### warmup_steps: 8000
     warmup_steps: 12000
     label_smoothing: 0.1
     toleration: 10

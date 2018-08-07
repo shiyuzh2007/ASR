@@ -187,8 +187,7 @@ class DataReader(object):
                     dst_len = len(caches[bucket][0])
                     logging.info(
                         'get_training_batches_with_buckets, src_len=' + str(src_len) + ',dst_len=' + str(
-                            dst_len) + ',bucket=' + str(bucket) + ',max(caches[bucket][2], caches[bucket][3])=' + str(
-                            max(caches[bucket][2], caches[bucket][3])))
+                            dst_len) + ',bucket=' + str(bucket) + ',max(caches[bucket][2], caches[bucket][3])=' + str(max(caches[bucket][2], caches[bucket][3])))
                 feat_batch, feat_batch_mask = self._create_feat_batch(caches[bucket][0])
                 target_batch, target_batch_mask = self._create_target_batch(caches[bucket][1], self.dst2idx)
                 # yield (feat_batch, feat_batch_mask, target_batch, target_batch_mask)

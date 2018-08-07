@@ -18,8 +18,6 @@ bucket_min: 50
 bucket_max: 10000
 bucket_step: 10
 train:
-    #### num_gpus: 4
-    #### tokens_per_batch: 30000
     num_gpus: 8
     tokens_per_batch: 50000
     src_path: '/mnt/lustre/xushuang2/syzhou/tensor2tensor/hkust_ci_phone/src_data/train_dim80/feats.scp.left3_sub3.sp'
@@ -33,7 +31,6 @@ train:
     grads_clip: 5
     optimizer: 'adam_decay'
     learning_rate: 1
-    #### warmup_steps: 4000
     warmup_steps: 12000
     label_smoothing: 0.1
     toleration: 10

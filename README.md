@@ -1,6 +1,6 @@
 # ASR Transformer
 
-This project is originally forked from https://github.com/chqiwang/transformer and we change it into ASR task. We compared five modeling units on Mandarin Chinese ASR tasks on HKUST datasets by sequence-to-sequence attention-based model with the Transformer, including CI-phonemes, syllables, words, sub-words and characters.
+This project is originally forked from https://github.com/chqiwang/transformer and we change it into ASR task. We compared five modeling units on Mandarin Chinese ASR tasks with HKUST datasets by sequence-to-sequence attention-based model with the Transformer, including CI-phonemes, syllables, words, sub-words and characters.
 
 Run steps:
 1)config your *.yaml; 2)python train.py; 3)python evaluate.py

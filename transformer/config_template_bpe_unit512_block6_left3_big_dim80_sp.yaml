@@ -17,7 +17,7 @@ model_dir: './exp/log_dir_unit512_block6_timescale5_left3_sub3_lr1.0_bpe_big_dim
 bucket_min: 50
 bucket_max: 10000
 bucket_step: 10
-min_count_in_bucket: 100
+min_count_in_bucket: 20
 train:
     num_gpus: 8
     tokens_per_batch: 50000

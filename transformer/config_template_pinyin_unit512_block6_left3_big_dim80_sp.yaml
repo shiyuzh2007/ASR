@@ -13,12 +13,12 @@ num_blocks: 6
 #### num_heads: 8
 num_heads: 16
 ff_activation: 'glu'
+model_dir: './exp/log_dir_unit512_block6_timescale5_left3_sub3_lr1.0_pinyin_big_dim80_sp'
 bucket_min: 50
 bucket_max: 10000
 bucket_step: 10
 min_count_in_bucket: 20
 is_attention_smoothing: False
-model_dir: './exp/log_dir_unit512_block6_timescale5_left3_sub3_lr1.0_pinyin_big_dim80_sp'
 train:
     num_gpus: 8
     tokens_per_batch: 50000

@@ -167,7 +167,7 @@ class DataReader(object):
             if len(caches[bucket][0]) > 0:
                 src_len = len(caches[bucket][0])
                 if self._config.min_count_in_bucket is None:
-                    default_min_count_in_bucket = 100
+                    default_min_count_in_bucket = 20
                     logging.info(
                         'min_count_in_bucket=' + str(
                             self._config.min_count_in_bucket) + ',use default_min_count_in_bucket=' + str(

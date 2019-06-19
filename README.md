@@ -16,6 +16,7 @@ We change it into ASR task. Five modeling units are compared on Mandarin Chinese
 <img src="results/300h_Switchboard_Results.png">
 <img src="results/1000h_AISHELL2_Results.png">
 <img src="results/150h_English_Mandarin_SEAME_Results.png">
+<img src="results/960h_Librispeech_Results.png">
 
 Contact
 Raise an issue on github or email to zhoushiyu2013@ia.ac.cn.
